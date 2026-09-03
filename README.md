@@ -4,3 +4,6 @@
 ![License](https://img.shields.io/badge/license-GPLv2-8a1f2f?style=for-the-badge)
 
 no soy mucho de subir mis dots pero aqui tan jejeje
+
+para mangowm waybar jejejeeee
+y unos de niri
