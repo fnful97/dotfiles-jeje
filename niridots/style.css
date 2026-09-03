@@ -1,0 +1,41 @@
+* {
+    font-family: "Terminus", "Monaco", "Consolas", monospace;
+    font-size: 14px;
+    min-height: 0;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0;
+}
+
+window#waybar {
+    background: #d6d6c2; /* warm off-white, like classic mac chrome */
+    color: #000000;
+    border-bottom: 1px solid #000000;
+}
+
+#battery {
+    padding: 0 12px;
+    color: #000000;
+}
+
+#custom-file,
+#custom-edit,
+#custom-view,
+#custom-special {
+    padding: 0 10px;
+    color: #000000;
+}
+
+#custom-file:hover,
+#custom-edit:hover,
+#custom-view:hover,
+#custom-special:hover {
+    background: #000000;
+    color: #d6d6c2;
+}
+
+#clock {
+    padding: 0 12px;
+    color: #000000;
+}

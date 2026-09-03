@@ -1,0 +1,38 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 24,
+    "spacing": 0,
+
+    "modules-left": ["battery"],
+    "modules-center": ["custom/file", "custom/edit", "custom/view", "custom/special"],
+    "modules-right": ["clock"],
+
+    "battery": {
+        "format": "{capacity}%",
+        "format-charging": "{capacity}% +",
+        "tooltip": false
+    },
+
+    "custom/file": {
+        "format": "file",
+        "tooltip": false
+    },
+    "custom/edit": {
+        "format": "edit",
+        "tooltip": false
+    },
+    "custom/view": {
+        "format": "view",
+        "tooltip": false
+    },
+    "custom/special": {
+        "format": "special",
+        "tooltip": false
+    },
+
+    "clock": {
+        "format": "{:%l:%M%p}",
+        "tooltip": false
+    }
+}
