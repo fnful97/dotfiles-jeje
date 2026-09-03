@@ -1,0 +1,8 @@
+el orden de los archivos para mango es
+
+config.conf < de mangowm 
+config.jsonc < de waybar 
+style.css < de waybar
+y foot.ini < para foot
+
+cada uno en su respectiva ~/.config/

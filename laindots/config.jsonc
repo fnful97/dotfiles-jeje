@@ -1,0 +1,55 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "height": 30,
+    "margin-bottom": 8,
+    "margin-left": 12,
+    "margin-right": 12,
+    "spacing": 0,
+
+    "modules-left": ["wlr/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "battery", "tray"],
+
+    "wlr/workspaces": {
+        "format": "{index}",
+        "on-click": "activate"
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%a %d %b}",
+        "tooltip-format": "{:%A, %d %B %Y}"
+    },
+
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": " {capacity}%",
+        "states": {
+            "warning": 25,
+            "critical": 10
+        }
+    },
+
+    "network": {
+        "format-wifi": "  {signalStrength}%",
+        "format-ethernet": " ",
+        "format-disconnected": "睊 off",
+        "tooltip-format": "{ifname} via {gwaddr}"
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "婢",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    }
+}

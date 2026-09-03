@@ -1,0 +1,86 @@
+/* Palette pulled from the wallpaper:
+   near-black void, glowing rose/magenta veins,
+   pale cream figure for text */
+
+@define-color canopy    rgba(5, 3, 3, 0.9); /* bar background, translucent */
+@define-color moss      #2b1216;   /* dark maroon - hover bg */
+@define-color mossdim   #1a0a0c;   /* deeper maroon-black */
+@define-color gold      #d0758b;   /* rose/magenta glow / active accent */
+@define-color cream     #c1b48e;   /* text */
+@define-color creamdim  #968c72;
+@define-color rust      #ff4d6d;   /* alert accent, used sparingly */
+
+* {
+    font-family: "Gallant12", "Gallant", monospace;
+    font-size: 18px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: @canopy;
+    color: @cream;
+    border-radius: 6px;
+    border: 1px solid @mossdim;
+}
+
+#workspaces {
+    margin: 0 4px;
+    padding: 0 4px;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    color: @creamdim;
+    background: transparent;
+    border: none;
+    border-radius: 4px;
+}
+
+#workspaces button.active {
+    color: @canopy;
+    background: @gold;
+}
+
+#workspaces button:hover {
+    background: @mossdim;
+    color: @cream;
+}
+
+#clock,
+#battery,
+#network,
+#pulseaudio,
+#tray {
+    padding: 0 10px;
+    color: @cream;
+}
+
+#battery.warning {
+    color: @gold;
+}
+
+#battery.critical {
+    color: @rust;
+}
+
+#network.disconnected {
+    color: @creamdim;
+}
+
+#pulseaudio.muted {
+    color: @creamdim;
+}
+
+#tray {
+    padding: 0 8px;
+}
+
+tooltip {
+    background: @canopy;
+    border: 1px solid @moss;
+    border-radius: 4px;
+}
+
+tooltip label {
+    color: @cream;
+}
