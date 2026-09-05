@@ -1,0 +1,71 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* Shared module look — paper card with ink outline */
+#workspaces,
+#custom-cava,
+#clock,
+#cpu,
+#temperature,
+#memory,
+#disk,
+#pulseaudio,
+#language {
+    background-color: #f4f2ec;
+    border: 2px solid #2b2b2b;
+    border-radius: 10px;
+    padding: 4px 12px;
+    margin: 4px 3px;
+    color: #2b2b2b;
+}
+
+/* Workspaces */
+#workspaces button {
+    padding: 0 6px;
+    color: #8a8a86;
+    background: transparent;
+}
+
+#workspaces button.active {
+    color: #2b2b2b;
+    font-weight: bold;
+}
+
+#workspaces button:hover {
+    background-color: #e3e1d8;
+    border-radius: 6px;
+}
+
+/* Clock */
+#clock {
+    font-weight: bold;
+}
+
+/* Right cluster */
+#cpu, #temperature, #memory, #disk, #pulseaudio, #language {
+    color: #4a4a46;
+}
+
+#temperature.critical {
+    color: #6b6b66;
+    border-color: #6b6b66;
+    font-weight: bold;
+}
+
+#pulseaudio.muted {
+    color: #b0aea6;
+}
+
+/* Tooltip */
+tooltip {
+    background-color: #f4f2ec;
+    border: 1px solid #2b2b2b;
+    color: #2b2b2b;
+}

@@ -1,0 +1,57 @@
+{
+    "layer": "top",
+    "position": "top",
+    "margin-top": 5,
+    "margin-left": 10,
+    "margin-right": 10,
+    "height": 30,
+    "spacing": 10,
+
+    "modules-left": ["niri/workspaces", "custom/cava"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "temperature", "memory", "disk", "pulseaudio", "niri/language"],
+
+    "niri/workspaces": {
+        "format": "{index}"
+    },
+
+    "custom/cava": {
+    	"exec": "cava -p ~/.config/cava/config_waybar | sed -u 's/;//g;s/0/ /g;s/1/▂/g;s/2/▃/g;s/3/▄/g;s/4/▅/g;s/5/▆/g;s/6/▇/g;s/7/█/g;s/8/█/g;s/9/█/g'",
+    	"format": "<span color='#4a4a46'>{}</span>"
+    },
+
+    "clock": {
+        "format": "<span color='#4a4a46'>{:%H:%M:%S}</span>",
+        "interval": 1
+    },
+
+    "cpu": {
+        "format": "cpu: <span color='#4a4a46'>{usage}%</span>",
+        "interval": 2
+    },
+
+    "temperature": {
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format": "tem: <span color='#4a4a46'>{temperatureC}°</span>"
+    },
+
+    "memory": {
+        "format": "ram: <span color='#4a4a46'>{percentage}%</span>",
+        "interval": 5
+    },
+
+    "disk": {
+        "format": "mem: <span color='#4a4a46'>{percentage_used}%</span>",
+        "path": "/"
+    },
+
+    "niri/language": {
+        "format": "lng: <span color='#4a4a46'>{short}</span>"
+    },
+
+    "pulseaudio": {
+        "format": "vol: <span color='#4a4a46'>{volume}%</span>"
+    }
+}
+
